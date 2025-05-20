@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Installer les dépendances
+      run: |
+        # Adapter la commande en fonction du langage de votre projet
+        npm install
+
+    - name: Exécuter les tests
+      run: |
+        # Adapter la commande selon votre framework de test
+        npm test
